@@ -17,16 +17,24 @@ Temperature & Pressure Record Files :
 /src/main/scala/com/stklm/core/processor/TemparatureData.scala
 /src/main/scala/com/stklm/core/processor/PresureData
 
+Test Cases :
+/src/test/scala/com/stklm/core/processor/PressureDataProcessor.scala
+/src/test/scala/com/stklm/core/processor/TemparatureDataProcessor.scala
+
+Resources :
+/src/test/resources/stockholmA_barometer_2013_2017.txt
+/src/test/resources/stockholmA_daily_temp_obs_2013_2017_t1t2t3txtntm.txt
 
 Requirements :
 
-Scala 
-Spark 
-Eclipse IDE 2017-18 with maven build enabled.
-Java JDK 8
-Should have JAVA_HOME set for the user in Environment variable.
-Replace the JAR_LOCATION and HDFS_DATA_LOCATION in tempdataprocessrun.sh and pressuredataprocessrun.sh with actual paths.
-Update value of spark_warehouse_dir in InfraUtility.scala according to the environment
+1)Scala 
+2)Spark 
+3)Eclipse IDE 2017-18 with maven build enabled.
+4)Java JDK 1.8
+5)Should have JAVA_HOME set for the user in Environment variable.
+6)Replace the JAR_LOCATION and HDFS_DATA_LOCATION in tempdataprocessrun.sh and pressuredataprocessrun.sh with actual paths.
+7)Update value of spark_warehouse_dir in InfraUtility.scala according to the environment
+8)Need to configure log4j.properties in spark conf folder and will require log4j jars in every node for achieving the same.
 
 
 Do you have other use cases or questions ?
