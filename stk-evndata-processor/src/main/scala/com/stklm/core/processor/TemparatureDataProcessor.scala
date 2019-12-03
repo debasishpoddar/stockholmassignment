@@ -12,7 +12,7 @@ object TemparatureDataProcessor {
 
   def main(args: Array[String]) {
 
-    val loggermain = LoggerFactory.getLogger(classOf[TemparatureDataProcessor])
+    @transient lazy val loggermain = LoggerFactory.getLogger(classOf[TemparatureDataProcessor])
     
     if (args.length == 0) {
       loggermain.error("Please provide the temparature data file(s) location.")
@@ -29,7 +29,7 @@ object TemparatureDataProcessor {
 
 class TemparatureDataProcessor {
   
-  val logger = LoggerFactory.getLogger(classOf[TemparatureDataProcessor])
+  @transient lazy val logger = LoggerFactory.getLogger(classOf[TemparatureDataProcessor])
   val appName ="Temparature Data Processor"  
   val temparatureData = "temparature_data"
   val infraUtility = new InfraUtility

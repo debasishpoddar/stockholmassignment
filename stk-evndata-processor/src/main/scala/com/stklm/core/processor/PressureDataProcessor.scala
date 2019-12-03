@@ -13,7 +13,7 @@ object PressureDataProcessor {
 
   def main(args: Array[String]) {
 
-    val loggermain = LoggerFactory.getLogger(classOf[PressureDataProcessor])
+   @transient lazy val loggermain = LoggerFactory.getLogger(classOf[PressureDataProcessor])
     
     if (args.length == 0) {
       loggermain.error("Please provide the pressure data file(s) location.")
@@ -31,7 +31,7 @@ object PressureDataProcessor {
 
 class PressureDataProcessor {
   
-  val logger = LoggerFactory.getLogger(classOf[PressureDataProcessor])
+  @transient lazy val logger = LoggerFactory.getLogger(classOf[PressureDataProcessor])
   val appName = "Pressure Data Processor"
   val pressureData = "pressure_data"
   val infraUtility = new InfraUtility

@@ -17,7 +17,7 @@ class TemparatureDataProcessorTest extends FunSuite with BeforeAndAfterEach {
   val tempdata = new TemparatureDataProcessor ()
   
   val temparatureFileLocation=Thread.currentThread().getContextClassLoader().getResource("stockholmA_daily_temp_obs_2013_2017_t1t2t3txtntm.txt").toString();
-  val loggertest = LoggerFactory.getLogger(classOf[TemparatureDataProcessorTest])
+  @transient lazy val loggertest = LoggerFactory.getLogger(classOf[TemparatureDataProcessorTest])
   
   /**
    * *Invoke Spark Session

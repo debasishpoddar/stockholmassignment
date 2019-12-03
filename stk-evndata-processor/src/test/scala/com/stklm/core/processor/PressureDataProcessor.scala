@@ -19,7 +19,7 @@ class PressureDataProcessorTest extends FunSuite with BeforeAndAfterEach {
   val pressdata = new PressureDataProcessor ()
   
   val pressureFileLocation =Thread.currentThread().getContextClassLoader().getResource("stockholmA_barometer_2013_2017.txt").toString();
-  val loggertest = LoggerFactory.getLogger(classOf[PressureDataProcessorTest])
+  @transient lazy val loggertest = LoggerFactory.getLogger(classOf[PressureDataProcessorTest])
   
   /**
    * *Invoke Spark Session
