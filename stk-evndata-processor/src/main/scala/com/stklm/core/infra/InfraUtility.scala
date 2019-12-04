@@ -8,8 +8,6 @@ import org.apache.spark.sql.functions._
  */
 class InfraUtility {
 
-  val header_key = "header"
-  val dropMalformed = "DROPMALFORMED"
   val spark_warehouse_dir = "spark.sql.warehouse.dir"
 
  /**
